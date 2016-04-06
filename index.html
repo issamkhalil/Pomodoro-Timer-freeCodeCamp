@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container" class="container-fluid">
+
+    <div class="row row1">
+        <div class="col-lg-4 col-lg-offset-4">
+            <h2 class="title text-center"> KHALIL Issam Pomodoro Timer</h2>
+        </div>
+    </div>
+    <div class="row row1">
+        <div class="col-lg-2  col-lg-offset-4 col-md-4 col-md-offset-2 col-xs-6 column1">
+            <p class="text-center">BREAK LENGTH</p>
+            <p class="text-center"><a href="#" id="breakPlus" class="plusBtn"><i class="fa fa-plus"></i></a>  <span id="breaklength">52</span>
+                <a href="#" id="breakMoin" class="moinBtn"><i class="fa fa-minus"></i></a>
+            </p>
+        </div>
+        <div class="col-lg-2  col-md-4  col-xs-6">
+            <p class="text-center ">SESSION LENGTH</p>
+            <p class="text-center"><a id="sessionPlus" href="#" class="plusBtn"><i class="fa fa-plus"></i></a> <span id="sessionlen">  52</span>
+                <a href="#" id="sessionMoin" class="moinBtn"><i class="fa fa-minus"></i></a>
+            </p>
+        </div>
+    </div>
+    <div class="row row1">
+        <div class="col-lg-2 col-lg-offset-5  col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
+            <button id="btn-startOrStop" class="center-block btn start">Start</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2 col-lg-offset-5 col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
+            <h1 id="sessionOrBreak" class="text-center timerValue"><p class="title">SESSION </p>
+                <small id="clockNum">00:30</small>
+            </h1>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 400 500" style="enable-background:new 0 0 400 500;" xml:space="preserve">
+
+                <filter  id="filter4286">
+	<feGaussianBlur  stdDeviation="1.4685"></feGaussianBlur>
+</filter>
+<filter  id="filter4162">
+	<feGaussianBlur  stdDeviation=".86621"></feGaussianBlur>
+</filter>
+<path class="st0" d="M68.5,57.4c0,0-32.5,35-3.9,90.4s121,78.7,120.8,111.5c-0.2,32.7-95,65.1-120,118.1S59.1,455,59.1,455
+	l277.7,3.6c0,0,29.5-53.6-14.9-103s-106.6-68.2-106.7-98.2c-0.1-30,120.4-68.2,129.4-135S318,55,318,55S68.5,57.4,68.5,57.4z"/>
+<path class="st1" d="M73.1,60.7c0,0-32.5,35-3.9,90.4s121,78.7,120.8,111.5c-0.2,32.7-95,65.1-120,118.1s-6.3,77.7-6.3,77.7
+	l277.7,3.6c0,0,29.5-53.6-14.9-103s-106.6-68.2-106.7-98.2c-0.1-30,120.4-68.2,129.4-135s-26.7-67.5-26.7-67.5L73.1,60.7z"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="497.0389" y1="-313.8165" x2="214.1127" y2="-313.8165" gradientTransform="matrix(1 0 0 -1 0 -52.4722)">
+	<stop  offset="0" style="stop-color:#FFC97F"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;"/>
+</linearGradient>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="351.1611" y1="-261.1189" x2="215.3162" y2="-315.9151" gradientTransform="matrix(1 0 0 -1 0 -52.4722)">
+	<stop  offset="0" style="stop-color:#FFC97F"/>
+	<stop  offset="1" style="stop-color:#000000;"/>
+</linearGradient>
+<path class="st2" d="M79.8,61.9c0,0-33.4,35-4,90.4S200,231,199.8,263.8c-0.2,32.7-97.5,65.1-123.2,118.1s-6.4,77.7-6.4,77.7
+	l285,3.6c0,0,30.2-53.6-15.3-103S230.5,292,230.4,261.9c-0.1-30,123.6-68.2,132.8-135s-27.4-67.5-27.4-67.5L79.8,61.9z"/>
+<g class="st3">
+
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="140.3759" y1="-161.1847" x2="272.3711" y2="-161.1847" gradientTransform="matrix(1 0 0 -1 0 -52.4722)">
+		<stop  offset="0" style="stop-color:#FF9E15"/>
+		<stop  offset="1" style="stop-color:#FF9E15;"/>
+	</linearGradient>
+	<path class="st4" d="M152.3,55h108.2c6.6,0,11.9,4.1,11.9,9.1v89.1c0,5.1-5.3,9.1-11.9,9.1H152.3c-6.6,0-11.9-4.1-11.9-9.1
+		c-8.3-29.2-18.1-58.3,0-89.1C140.4,59.1,145.7,55,152.3,55z"/>
+</g>
+<path class="st5" d="M260.1,59.3c0,0,29.9,51.8,7.1,83.2c-22.8,31.4-80.5,52.8-80.5,52.8C210.4,164.2,232.7,143.9,260.1,59.3z"/>
+<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="57.81" y1="-96.9214" x2="350.0739" y2="-96.9214" gradientTransform="matrix(1 0 0 -1 0 -52.4722)">
+	<stop  offset="0" style="stop-color:#000000"/>
+	<stop  offset="0.2977" style="stop-color:#757575"/>
+	<stop  offset="0.8227" style="stop-color:#403F3F"/>
+	<stop  offset="1" style="stop-color:#000000"/>
+</linearGradient>
+<path class="st6" d="M67.8,26.8h272.3c5.5,0,10,3.4,10,7.7l0,0v20c0,4.2-4.5,7.7-10,7.7l0,0H67.8c-5.5,0-10-3.4-10-7.7l0,0v-20
+	C57.8,30.2,62.3,26.8,67.8,26.8C67.8,26.8,67.8,26.8,67.8,26.8"/>
+<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="28.2531" y1="-79.4492" x2="373.3562" y2="-79.4492" gradientTransform="matrix(1 0 0 -1 0 -52.4722)">
+	<stop  offset="0" style="stop-color:#000000"/>
+	<stop  offset="0.2977" style="stop-color:#757575"/>
+	<stop  offset="0.8227" style="stop-color:#403F3F"/>
+	<stop  offset="1" style="stop-color:#000000"/>
+</linearGradient>
+<path class="st7" d="M40.2,5.9h321.3c6.6,0,11.9,4.1,11.9,9.2v23.9c0,5.1-5.3,9.2-11.9,9.2H40.2c-6.6,0-11.9-4.1-11.9-9.2V15
+	C28.3,10,33.6,5.9,40.2,5.9"/>
+<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="53.9252" y1="-513.5487" x2="363.6186" y2="-513.5487" gradientTransform="matrix(1 0 0 -1 0 -52.4722)">
+	<stop  offset="0" style="stop-color:#000000"/>
+	<stop  offset="0.2977" style="stop-color:#757575"/>
+	<stop  offset="0.8227" style="stop-color:#403F3F"/>
+	<stop  offset="1" style="stop-color:#000000"/>
+</linearGradient>
+<path class="st8" d="M64.2,443.4h289.2c5.7,0,10.3,3.4,10.3,7.7v20c0,4.2-4.6,7.7-10.3,7.7H64.2c-5.7,0-10.3-3.4-10.3-7.7v-20
+	C53.9,446.9,58.5,443.4,64.2,443.4"/>
+<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="26.7069" y1="-527.3934" x2="375.527" y2="-527.3934" gradientTransform="matrix(1 0 0 -1 0 -52.4722)">
+	<stop  offset="0" style="stop-color:#000000"/>
+	<stop  offset="0.2977" style="stop-color:#757575"/>
+	<stop  offset="0.8227" style="stop-color:#403F3F"/>
+	<stop  offset="1" style="stop-color:#000000"/>
+</linearGradient>
+<path class="st9" d="M38.6,453.8h325c6.6,0,11.9,4.1,11.9,9.1l0,0v23.9c0,5.1-5.3,9.1-11.9,9.1l0,0h-325c-6.6,0-11.9-4.1-11.9-9.1
+	l0,0V463C26.7,457.9,32,453.8,38.6,453.8C38.6,453.8,38.6,453.8,38.6,453.8"/>
+<linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="100.5839" y1="-381.3755" x2="121.9891" y2="-395.433" gradientTransform="matrix(1 0 0 -1 0 -52.4722)">
+	<stop  offset="0" style="stop-color:#FFC97F"/>
+	<stop  offset="1" style="stop-color:#FFC97F;"/>
+</linearGradient>
+<path class="st10" d="M193.5,275.4c0,0-103.9,73.8-120.1,102.5c-24.3,43,18,58.2,18,58.2C54.7,370.9,177.5,319.4,193.5,275.4z"/>
+
+
+                <path class="st11" d="M208.5,289.3c-35.6,0.8-95.9,138.9-95.9,138.9l198.5-2.8C311.2,425.5,244.1,288.6,208.5,289.3L208.5,289.3z"/>
+<path class="st12" d="M171.2,303.4c0,0-55,43.5-67,72.3c-18.1,43,37.3,62.1,37.3,62.1C114.2,372.5,159.3,347.3,171.2,303.4z"/>
+<path class="st12" d="M253.8,301.4c0,0,58.4,43.5,71.3,72.3c19.2,43-39.7,62.1-39.7,62.1C314.4,370.5,266.5,345.4,253.8,301.4z"/>
+  
+<linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="60.0721" y1="-229.7012" x2="134.5181" y2="-205.6879" gradientTransform="matrix(1 0 0 -1 0 -52.4722)">
+	<stop  offset="0" style="stop-color:#FFC97F"/>
+	<stop  offset="1" style="stop-color:#FFC97F;"/>
+</linearGradient>
+                <linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="-85.9016" y1="-411.2582" x2="275.2493" y2="-411.2582" gradientTransform="matrix(1 0 0 -1 0 -52.4722)">
+	<stop  offset="0" style="stop-color:#FF9E15"/>
+	<stop  offset="1" style="stop-color:#FF9E15;stop-opacity:0"/>
+</linearGradient>
+                
+<path class="st13" d="M74,65.3c0,0-24.1,53.4-3.4,84.8s125.7,90.7,125.7,90.7C139.4,191.8,78.7,145.1,74,65.3z"/>
+<path class="st14" d="M107.3,141.9c1.6,5.1,4.3,9.9,8.2,14.3c27.7,31.4,71.3,40.9,71.3,40.9c-18.6-20.1-26.6-23-45.9-54.4
+	L107.3,141.9L107.3,141.9z"/>
+<g class="st15">
+
+		<linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="301.7304" y1="-269.4615" x2="279.3055" y2="-246.6952" gradientTransform="matrix(1 0 0 -1 0 -52.4722)">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;"/>
+	</linearGradient>
+	<path class="st16" d="M341.1,146.6c-16.3,38.3-53,60.1-119.2,99.7c0,0,42.3-34.9,62.1-50.3C335.6,156,329.5,146.2,341.1,146.6z"/>
+</g>
+<linearGradient id="bottompart_1_" gradientUnits="userSpaceOnUse" x1="-307.3562" y1="439.5973" x2="311.74" y2="439.5973">
+	<stop  offset="0" style="stop-color:#FF9E15"/>
+	<stop  offset="1" style="stop-color:#FF9E15"/>
+</linearGradient>
+
+<rect id="bottompart" x="33" y="442" class="st17" width="340" height="1"/>
+
+                <linearGradient id="topPart_1_" gradientUnits="userSpaceOnUse" x1="-305.3562" y1="249.4307" x2="313.74" y2="249.4307">
+	<stop  offset="0" style="stop-color:#FF9E15"/>
+	<stop  offset="1" style="stop-color:#FF9E15"/>
+</linearGradient>
+
+<rect id="topPart" x="35" y="79" class="st18" width="340.4" height="180"/>
+
+
+<path class="st1" id="couver" d="M4,3v512.9h400V3H4z M378.8,489.8c0,5.1-5.3,9.1-11.9,9.1h-325c-6.6,0-11.9-4.1-11.9-9.1v-23.9
+	c0-5.1,5.3-9.1,11.9-9.1h0h15.3V454c0-1.4,0.5-2.8,1.4-4c-3.8-11.1-6.9-34,10-69.8c25-52.9,119.8-85.4,120-118.1
+	c0.1-9.6-7.8-18.4-19.8-27.4c-16-11.3-37.4-23.2-56.7-37.7c-18-12.9-34.7-27.9-44.3-46.4c-22.6-43.8-7-74.8,0.5-85.9
+	c-4.2-0.9-7.3-3.9-7.3-7.4V51H43.5c-6.6,0-11.9-4.1-11.9-9.2V17.9c0-5.1,5.3-9.2,11.9-9.2h321.3c6.6,0,11.9,4.1,11.9,9.2v23.9
+	c0,5.1-5.3,9.2-11.9,9.2h-11.4v6.4c0,4.2-4.5,7.7-10,7.7h-2.5c9.9,5.1,23.9,20.2,17.9,64.9c-9,66.7-129.5,104.9-129.4,135
+	c0.1,30,62.3,48.8,106.7,98.2c29.5,32.9,26.3,67.7,20.9,87.2c0.8,1.1,1.2,2.4,1.2,3.7v2.8h8.8c6.6,0,11.9,4.1,11.9,9.1V489.8z"/>
+<g id="middlePart">
+	<linearGradient id="midlePart_1_" gradientUnits="userSpaceOnUse" x1="210.4274" y1="437.9001" x2="210.4274" y2="377.624">
+		<stop  offset="0" style="stop-color:#FF9E15"/>
+		<stop  offset="1" style="stop-color:#FF9E15"/>
+	</linearGradient>
+	<polygon id="midlePart" class="st19" points="204.9,285.6 208.5,289.7 208.3,437.7 212.3,437.9 212.5,289.6 216,285.6 	"/>
+	<linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="210.7258" y1="292.8882" x2="210.7258" y2="278.9333">
+		<stop  offset="0" style="stop-color:#FF9E15"/>
+		<stop  offset="1" style="stop-color:#FF9E15"/>
+	</linearGradient>
+	<polygon id="fluxTet" class="st20" points="231.2,257.6 210.8,292.9 190.2,257.7 	"/>
+</g>
+</svg>
+
+        </div>
+    </div>
+    <footer class="row">
+        <div class="col-lg-12">
+            <p class="author text-center">Created By <a href="mailto:issam.khalil11@gmail.com">KHALIL Issam </a></p>
+        </div>
+    </footer>
+</div>
+<script>
+    var currentTopH = 180;
+    var currentTopY = 79;
+    var currentBottomH = 1;
+    var currentBottmY = 442;
+    var currentBlength = 5;
+    var currentSlength = 25;
+    var elTop = document.getElementById('topPart');
+    var elBot = document.getElementById('bottompart');
+    var fluxTet = document.getElementById('fluxTet');
+    var flux = document.getElementById('middlePart');
+    var mainSvg = document.querySelector("svg");
+    var clockNum = document.getElementById("clockNum");
+    var sessionLen = document.getElementById("sessionlen");
+    var breakLen = document.getElementById("breaklength");
+    var  btnStartOrStop=document.getElementById("btn-startOrStop");
+    var currentDegRot = 0;
+    var isSession =true;
+    var intervale = false;
+    var intervaleNum = false;
+    var clockNumValueSec = 0;
+    var clockNumValueMin = 0;
+    var isStarted = false;
+   fluxTet.setAttribute("display", "none");
+    flux.setAttribute("display", "none");
+
+    function rotate() {
+        currentDegRot++;
+        if (currentDegRot < 360) {
+            if (currentDegRot == 180) {
+                currentTopH = 180;
+                currentTopY = 79;
+                currentBottomH = 1;
+                currentBottmY = 442;
+                elTop.setAttribute("height", currentTopH);
+                elTop.setAttribute("y", currentTopY);
+                elBot.setAttribute("height", currentBottomH);
+                elBot.setAttribute("y", currentBottmY);
+            }
+            mainSvg.style.transform = "rotate(" + currentDegRot + "deg)"
+        } else {
+            clearInterval(intervale);
+            if(isSession){
+                document.querySelector("#sessionOrBreak >.title").innerText="BREAK"
+                timer(currentBlength);
+            }else{
+                document.querySelector("#sessionOrBreak >.title").innerText="SESSION";
+                timer(currentSlength);
+
+            }
+            currentDegRot=0;
+            isSession=!isSession;
+        }
+    }
+    function format(num) {
+        if (('' + num).length == 1) {
+            return '0' + num;
+        } else {
+            return num;
+        }
+    }
+
+    function clNum() {
+        if (clockNumValueSec == 0) {
+            if (clockNumValueMin == 0) {
+                clearInterval(intervaleNum);
+            } else {
+                clockNumValueMin--;
+                clockNumValueSec = 59;
+            }
+        } else {
+            clockNumValueSec--;
+        }
+        clockNum.innerText = format(clockNumValueMin) + ':' + format(clockNumValueSec);
+    }
+
+    function updateUI(){
+        sessionLen.innerText=currentSlength;
+        breakLen.innerText=currentBlength;
+        clockNum.innerText=format(currentSlength)+':00';
+    }
+
+    function moveDown() {
+        if (currentTopH > 0) {
+            currentTopH--;
+            currentTopY++;
+            currentBottomH++;
+            currentBottmY--;
+            elTop.setAttribute("height", currentTopH);
+            elTop.setAttribute("y", currentTopY);
+            elBot.setAttribute("height", currentBottomH);
+            elBot.setAttribute("y", currentBottmY);
+        } else {
+            fluxTet.setAttribute("display", "none");
+            flux.setAttribute("display", "none");
+            clearInterval(intervale);
+            intervale = setInterval(rotate, 5);
+        }
+    }
+
+    function toast(txt){
+      var a= document.createElement('div');
+       a.id='toast';
+        a.innerText=txt;
+        document.getElementById('container').appendChild(a);
+        setTimeout(function(){
+            document.getElementById('container').removeChild(a);
+        },3000);
+    }
+
+    document.getElementById("sessionMoin").addEventListener('click',function(){
+       if(isStarted){
+           toast("please stop the Timer !");
+       }else{
+           if(currentSlength>1){
+
+               currentSlength--;
+           updateUI();
+           }else{
+               toast("imposible !!!");
+           }
+       }
+    });
+    document.getElementById("sessionPlus").addEventListener('click',function(){
+       if(isStarted){
+           toast("please stop the Timer !");
+       }else{
+           currentSlength++;
+           updateUI();
+       }
+    });
+    document.getElementById("breakMoin").addEventListener('click',function(){
+           if(isStarted){
+               toast("please stop the Timer !");
+           }else{
+               if(currentBlength>1){
+               currentBlength--;
+               updateUI();
+               }else {
+                   toast("imposible !!!");
+               }
+           }
+    });
+    document.getElementById("breakPlus").addEventListener('click',function(){
+       if(isStarted){
+           toast("please stop the Timer !");
+       }else{
+           currentBlength++;
+           updateUI();
+       }
+    });
+
+    btnStartOrStop.addEventListener('click',function(){
+      if(! isStarted){
+
+        timer(currentSlength);
+        btnStartOrStop.classList.remove("start");
+        btnStartOrStop.innerText="Stop";
+        btnStartOrStop.classList.add("stop");
+      }else{
+          clearInterval(intervale);
+          clearInterval(intervaleNum);
+          btnStartOrStop.classList.remove("stop");
+          btnStartOrStop.innerText="start";
+          btnStartOrStop.classList.add("start");
+
+          updateUI();
+      }
+        isStarted=!isStarted;
+    });
+
+
+    updateUI();
+    function timer(time) {
+        var numMinSec = (time * 60000) / 180;
+        clearInterval(intervale);
+        clearInterval(intervaleNum);
+        flux.removeAttribute("display");
+        fluxTet.removeAttribute("display");
+
+        clockNumValueMin = time;
+        clockNumValueSec = 0;
+        intervale = setInterval(moveDown, numMinSec);
+        intervaleNum = setInterval(clNum, 1000);
+    }
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
